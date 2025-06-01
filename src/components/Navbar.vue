@@ -36,7 +36,7 @@ export default {
     <div class="AppHeader-globalBar  js-global-bar">
         <div class="AppHeader-globalBar-start">
             <button class="Button Button--iconOnly Button--secondary"><i class="fa fa-bars" aria-hidden="true"></i></button>
-            <img src="../assets/images/image.png" width="32px" height="32px" alt="" srcset="">
+            <img src="../assets/images/icon.svg" width="32px" height="32px" alt="" srcset="">
             <input placeholder="search user..." v-model="inputExtract" class="search-input" type="text">
             <button @click="fetchDataFromGitApi()" class="Button Button--secondary test">sumbit</button>
         </div>
