@@ -1,13 +1,16 @@
 <script>
 export default {
     name: "Navbar",
+    props: {userData: Object, userReposData: {type: Array, required:true, default: () => []}},
     data: function(){
         return {
             url: "https://api.github.com/users/",
-            inputExtract: ""
+            inputExtract: "",
+            isSearching: false
         }
     },
     methods: {
+        
         fetchDataFromGitApi(){
             if(this.inputExtract.trim() === "") return;
             const xhttp = new XMLHttpRequest();
@@ -16,6 +19,7 @@ export default {
                 if(this.readyState == 4 && this.status == 200){
                     let data = JSON.parse(this.responseText);
                     console.log(data);
+                    self.isSearching = true;
                     self.$emit('passUserData', data);
 
                 }
@@ -48,7 +52,7 @@ export default {
             </div>
         </div> -->
     </div>
-    <div class="AppHeader-localBar">
+    <div v-if="isSearching" class="AppHeader-localBar">
         <nav aria-label="User" data-view-component="true" class="js-sidenav-container-pjax js-responsive-underlinenav overflow-hidden UnderlineNav">
             <ul data-view-component="true" class="UnderlineNav-body list-style-none">
                 <li data-view-component="true" class="d-inline-flex">
@@ -70,7 +74,7 @@ export default {
                     </path>
                   </svg>
                   <span data-view-component="true">Repositories</span>
-                  <span title="57" data-view-component="true" class="Counter">57</span>
+                  <span :title="`MF has ${userReposData?userReposData.length:0} repositories`" data-view-component="true" class="Counter">{{ userReposData?userReposData.length:0 }}{{ console.log("log at Navbar.vue: \n",userReposData) }}</span>
                     </a>
                 </li>
                 <li data-view-component="true" class="d-inline-flex">
