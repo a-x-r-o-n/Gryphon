@@ -1,6 +1,5 @@
 <script>
 import "../assets/main.css";
-import "../assets/custom.css";
 export default {
     name: "SearchDisplayer",
     props: ["userData"],
@@ -179,6 +178,91 @@ export default {
 
                         </div>
                     </div>
+
+                    <div data-view-component="true" class="Layout-main">
+                        <div class="Box mt-4 ">
+                            <div class="Box-body p-4">
+                                <div class="d-flex flex-justify-between">
+                                    <div class="text-mono text-small mb-3">
+                                        <a href="/soniyav20/soniyav20" class="no-underline Link--primary">{{userData?userData["login"]:'a'}}</a><span
+                            class="color-fg-muted d-inline-block" style="padding:0px 2px;">/</span>README<span
+                            class="color-fg-muted">.md</span>
+                                    </div>
+                                </div>
+
+                                <article class="markdown-body entry-content container-lg f5" itemprop="text">
+
+                                    <div class="markdown-heading" dir="auto">
+                                        <h1 class="heading-element" dir="auto">📊 GitHub Stats:</h1><a id="user-content--github-stats"
+                                            class="anchor" aria-label="Permalink: 📊 GitHub Stats:" href="#-github-stats"><svg
+                                            class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                                            aria-hidden="true">
+                                            <path
+                                                d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                            </path>
+                                            </svg></a>
+                                    </div>
+                                    <p style="display: flex; justify-content: space-evenly;" dir="auto"><a target="_blank" rel="noopener noreferrer nofollow"
+                                        href="https://camo.githubusercontent.com/60af0bb8646fa8afb66b6bf20fc246d0cc5e223c639b92efe15ea664797ffe8c/68747470733a2f2f6769746875622d726561646d652d73747265616b2d73746174732e6865726f6b756170702e636f6d2f3f757365723d736f6e697961763230267468656d653d6461726b26686964655f626f726465723d66616c7365"><img
+                                        :src="`https://github-readme-streak-stats.herokuapp.com/?user=${userData?userData['login']:'a'}&theme=transparent&hide_border=true`"
+                                        alt=""
+                                        data-canonical-src="https://github-readme-streak-stats.herokuapp.com/?user=soniyav20&amp;theme=transparent&amp;hide_border=false"
+                                        style="max-width: 100%;"></a>
+
+                                        <a target="_blank" rel="noopener noreferrer nofollow"
+                                        href="https://camo.githubusercontent.com/dd64b5d220a8bf4445005a129d1bf452c9cc671429974d0bc971e2d2221a0088/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d736f6e697961763230267468656d653d6461726b26686964655f626f726465723d66616c736526696e636c7564655f616c6c5f636f6d6d6974733d7472756526636f756e745f707269766174653d74727565"><img
+                                        :src="`https://github-readme-stats.vercel.app/api?username=${userData?userData['login']:'a'}&theme=transparent&hide_border=true`"
+                                        alt=""
+                                        data-canonical-src="https://github-readme-stats.vercel.app/api?username=soniyav20&amp;theme=transparent&amp;hide_border=false&amp;include_all_commits=true&amp;count_private=true"
+                                        style="max-width: 100%;"></a>
+                                    </p>
+
+                                    <p dir="auto" style="display: flex; justify-content: space-evenly;">
+                                        <a target="_blank" rel="noopener noreferrer nofollow"
+                                        href="https://camo.githubusercontent.com/ab960ba950334e2f3f537e77c2bd1aa515b9bb7df044a06074edaab906692524/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f7265706f732d7065722d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
+                                        :src="`http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=${userData?userData['login']:'a'}&theme=transparent`"
+                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=soniyav20&amp;theme=transparent"
+                                        style="max-width: auto;"></a>
+
+                                        <a target="_blank" rel="noopener noreferrer nofollow"
+                                        href="https://camo.githubusercontent.com/fd66e543ec4e2f73c5a4c5ced3a590f8f69d3a8ffc47ef2bd7bcdc567aa6db90/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f70726f647563746976652d74696d653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
+                                        :src="`http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=${userData?userData['login']:'a'}&theme=transparent`"
+                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=soniyav20&amp;theme=transparent"
+                                        style="max-width: auto;"></a>
+
+                                        <a target="_blank" rel="noopener noreferrer nofollow"
+                                        href="https://camo.githubusercontent.com/af6d93cce46283b585fffba7f1ff9d55fb329eef0013975ca8a316705a3a0ded/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f6d6f73742d636f6d6d69742d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
+                                        :src="`http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=${userData?userData['login']:'a'}&theme=transparent`"
+                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=soniyav20&amp;theme=transparent"
+                                        style="max-width: 100%;"></a>
+                                    </p>
+                                    <!-- <p dir="auto" style="display: flex; justify-content: space-evenly;">
+                                        <a target="_blank" rel="noopener noreferrer nofollow"
+                                        href="https://camo.githubusercontent.com/ab960ba950334e2f3f537e77c2bd1aa515b9bb7df044a06074edaab906692524/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f7265706f732d7065722d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
+                                        :src="`https://github-readme-stats.vercel.app/api/wakatime?username=${userData?userData['login']:''}&theme=transparent&hide_border=true`"
+                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=soniyav20&amp;theme=transparent"
+                                        style="max-width: auto;"></a>
+                                    </p> -->
+                                    <div class="markdown-heading" dir="auto">
+                                        <h2 class="heading-element" dir="auto">🏆 GitHub Trophies</h2><a
+                                            id="user-content--github-trophies" class="anchor" aria-label="Permalink: 🏆 GitHub Trophies"
+                                            href="#-github-trophies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1"
+                                            width="16" height="16" aria-hidden="true">
+                                            <path
+                                                d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                            </path>
+                                            </svg></a>
+                                    </div>
+                                </article>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </main>

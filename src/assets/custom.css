@@ -14674,6 +14674,61 @@ dialog.Overlay:not([open]) {
 .Layout.Layout--divided.Layout--sidebarPosition-end .Layout-main {
     grid-column: 1
 }
+.markdown-body>*:first-child>.heading-element:first-child {
+    margin-top: 0 !important
+}
+
+.markdown-heading {
+    position: relative
+}
+
+.markdown-heading .heading-element:hover+.anchor {
+    opacity: 1
+}
+
+.markdown-heading h1.heading-element+.anchor,
+.markdown-heading h2.heading-element+.anchor {
+    transform: translateY(calc(-50% - 0.3rem))
+}
+
+.markdown-heading .anchor {
+    position: absolute;
+    top: 50%;
+    left: -28px;
+    display: flex;
+    width: 28px;
+    height: 28px;
+    margin: auto;
+    border-radius: var(--borderRadius-medium);
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%)
+}
+
+.markdown-heading .anchor:hover {
+    opacity: 1
+}
+
+.markdown-heading .anchor:focus {
+    outline: 2px solid var(--focus-outlineColor);
+    outline-offset: -2px;
+    opacity: 1
+}
+
+@media(pointer: coarse) {
+    .markdown-heading .anchor {
+        opacity: 1
+    }
+}
+
+.markdown-heading .anchor .octicon {
+    color: var(--fgColor-default)
+}
+
+summary>.markdown-heading {
+    display: inline-block
+}
 
 .Layout-divider {
     display: none;
