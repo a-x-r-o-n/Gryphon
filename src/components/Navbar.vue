@@ -1,7 +1,7 @@
 <script>
 export default {
     name: "Navbar",
-    props: {userData: Object, userReposData: {type: Array, required:true, default: () => []}},
+    props: {userData: Object, userReposData: {type: Array, required:true, default: () => []}, userStarredData: {type: Array, required:true, default: () => []}},
     data: function(){
         return {
             url: "https://api.github.com/users/",
@@ -74,7 +74,8 @@ export default {
                     </path>
                   </svg>
                   <span data-view-component="true">Repositories</span>
-                  <span :title="`MF has ${userReposData?userReposData.length:0} repositories`" data-view-component="true" class="Counter">{{ userReposData?userReposData.length:0 }}{{ console.log("log at Navbar.vue: \n",userReposData) }}</span>
+                  <span v-if="userReposData.length ===0" hidden="hidden" :title="`MF has ${userReposData?userReposData.length:0} repositories`" data-view-component="true" class="Counter">{{ userReposData?userReposData.length:0 }}</span>
+                  <span v-else  :title="`MF has ${userReposData?userReposData.length:0} repositories`" data-view-component="true" class="Counter">{{ userReposData?userReposData.length:0 }}{{ console.log("log at Navbar.vue: \n",userReposData) }}</span>
                     </a>
                 </li>
                 <li data-view-component="true" class="d-inline-flex">
@@ -109,7 +110,8 @@ export default {
                     </path>
                   </svg>
                   <span data-view-component="true">Stars</span>
-                  <span title="1" data-view-component="true" class="Counter">1</span>
+                  <span v-if="userStarredData.length === 0" title="1" hidden="hidden" data-view-component="true" class="Counter">{{ userStarredData?userStarredData.length:0 }}{{ console.log("log at Navbar.vue: \n",userStarredData) }}</span>
+                  <span v-else title="1" data-view-component="true" class="Counter">{{ userStarredData?userStarredData.length:0 }}{{ console.log("log at Navbar.vue: \n",userStarredData) }}</span>
                 </a>
               </li>
             </ul>

@@ -10,6 +10,7 @@ export default {
       userData: null,
       userUrl: `https://api.github.com/users/${this.userData?this.userData["Login"]:''}`,
       userRepos: this.userData?(this.userUrl+'/repos'):'',
+      userStarred: this.userData?(this.userUrl+'/starred'):'',
       userReposData: null,
     }
   },
@@ -18,6 +19,7 @@ export default {
       console.log("Method Ativated");
       this.userData = data;
       this.fetchUserRepos();
+      this.fetchUserStarred();
     },
     fetchUserRepos(){
       if(this.userData["login"]){
@@ -32,6 +34,20 @@ export default {
         xhttp.open("GET", `${this.userData["repos_url"]}`, true);
         xhttp.send();
       }
+    },
+    fetchUserStarred(){
+      if(this.userData["login"]){
+        const xhttp = new XMLHttpRequest();
+        let self = this;
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            self.userStarred = JSON.parse(this.responseText);
+            // console.log("log at App.vue:\n",this.userReposData);
+          }
+        };
+        xhttp.open("GET", `https://api.github.com/users/${this.userData["login"]}/starred`, true);
+        xhttp.send();
+      }
     }
   },
   components: {
@@ -42,7 +58,7 @@ export default {
 
 
 <template>
-  <Navbar @passUserData="bindUserData" :userData = this.userData :userReposData = this.userReposData?this.userReposData:[] />
+  <Navbar @passUserData="bindUserData" :userData = this.userData :userReposData = this.userReposData?this.userReposData:[] :userStarredData = this.userStarred?this.userStarred:[] />
   <SearchDisplayer :userData="this.userData"/>
   
 </template>
