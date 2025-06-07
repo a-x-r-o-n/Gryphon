@@ -1,7 +1,7 @@
 <script>
 export default {
     name: "Navbar",
-    props: {userData: Object, userReposData: {type: Array, required:true, default: () => []}, userStarredData: {type: Array, required:true, default: () => []}},
+    props: {userData: Object, userReposData: {type: Array, required:true, default: () => []}, userStarredData: {type: Array, required:true, default: () => []},gitt:String},
     data: function(){
         return {
             url: "https://api.github.com/users/",
@@ -28,6 +28,7 @@ export default {
                 }
             }
             xhttp.open("GET", this.url + this.inputExtract);
+            xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
             xhttp.send();  
         }
     }

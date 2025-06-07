@@ -2,9 +2,52 @@
 import "../assets/main.css";
 export default {
     name: "SearchDisplayer",
-    props: ["userData"],
+    props: {userData:Object,recentCreatedRepo:{type:Array,default: () => {}},recentCreatedRepoWithLanguage:{type:Object,default: () => {}}, gitt:String}, 
     data: function () {
         return {
+            languageFrameworkColors : {
+                "javascript": "#f1e05a",
+                "python": "#3572A5",
+                "java": "#b07219",
+                "c++": "#f34b7d",
+                "c": "#555555",
+                "c#": "#178600",
+                "go": "#00ADD8",
+                "ruby": "#701516",
+                "php": "#4F5D95",
+                "typescript": "#3178c6",
+                "swift": "#ffac45",
+                "kotlin": "#A97BFF",
+                "objective-c": "#438eff",
+                "shell": "#89e051",
+                "html": "#e34c26",
+                "css": "#563d7c",
+                "dart": "#00B4AB",
+                "rust": "#dea584",
+                "scala": "#c22d40",
+                "perl": "#0298c3",
+                "haskell": "#5e5086",
+                "r": "#198CE7",
+                "clojure": "#db5855",
+                "elixir": "#6e4a7e",
+                "lua": "#000080",
+                "assembly": "#6E4C13",
+                "matlab": "#e16737",
+                "powershell": "#012456",
+                "dockerfile": "#384d54",
+                "makefile": "#427819",
+                // Frameworks
+                "vue": "#41B883",
+                "react": "#61DAFB",
+                "angular": "#DD0031",
+                "django": "#092E20",
+                "flask": "#000000",
+                "laravel": "#FF2D20",
+                "spring": "#6DB33F",
+                "express": "#000000",
+                "ruby on rails": "#CC0000",
+                "asp.net": "#512BD4"
+            }
 
         }
     },
@@ -243,8 +286,22 @@ export default {
                                         data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=soniyav20&amp;theme=transparent"
                                         style="max-width: auto;"></a>
                                     </p> -->
+                                    
+                                    <!-- <div class="markdown-heading" dir="auto">
+                                        <h2 class="heading-element" dir="auto">🌐 Socials:</h2><a id="user-content--socials"
+                                            class="anchor" aria-label="Permalink: 🌐 Socials:" href="#-socials"><svg
+                                            class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                                            aria-hidden="true">
+                                            <path
+                                                d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                                            </path>
+                                            </svg></a>
+                                    </div>
+                                    <p dir="auto">
+                                        <a href="https://linkedin.com/in/soniyavijay" rel="nofollow"><img src="https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff" alt="LinkedIn" data-canonical-src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" style="height: 25px;"></a>
+                                    </p> -->
                                     <div class="markdown-heading" dir="auto">
-                                        <h2 class="heading-element" dir="auto">🏆 GitHub Trophies</h2><a
+                                        <h1 class="heading-element" dir="auto">🏆 GitHub Trophies</h1><a
                                             id="user-content--github-trophies" class="anchor" aria-label="Permalink: 🏆 GitHub Trophies"
                                             href="#-github-trophies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1"
                                             width="16" height="16" aria-hidden="true">
@@ -253,12 +310,342 @@ export default {
                                             </path>
                                             </svg></a>
                                     </div>
+                                    <p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow"
+                                        href="https://camo.githubusercontent.com/38df3110343df49889e447f4e3529f4d8c45a178123d4fc4ccf1e79f9ae56e40/68747470733a2f2f6769746875622d70726f66696c652d74726f7068792e76657263656c2e6170702f3f757365726e616d653d736f6e697961763230267468656d653d7261646963616c266e6f2d6672616d653d66616c7365266e6f2d62673d66616c7365266d617267696e2d773d34"><img
+                                        :src="`https://github-profile-trophy.vercel.app/?username=${userData?userData['login']:'a'}&theme=darkhub`"
+                                        alt=""
+                                        data-canonical-src="https://github-profile-trophy.vercel.app/?username=soniyav20&amp;theme=radical&amp;no-frame=false&amp;no-bg=false&amp;margin-w=4"
+                                        style="max-width: 100%;"></a>
+                                    </p>
+                                    <!-- <img src="https://raw.githubusercontent.com/a-x-r-o-n//output/snake.svg" alt="Snake animation" /> -->
                                 </article>
 
 
 
                             </div>
                         </div>
+                        <!--  -->
+                  <div class="mt-4">
+                    <div class="js-pinned-items-reorder-container">
+                      <h2 class="f4 mb-2 text-normal">
+                        Recent repositories
+                        <span data-view-component="true">
+                          <svg style="box-sizing: content-box; color: var(--color-icon-primary);" width="16" height="16"
+                            viewBox="0 0 16 16" fill="none" aria-hidden="true" data-view-component="true"
+                            class="spinner pinned-items-spinner js-pinned-items-spinner v-align-text-bottom ml-1 anim-rotate">
+                            <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-opacity="0.25" stroke-width="2"
+                              vector-effect="non-scaling-stroke" fill="none" />
+                            <path d="M15 8a7.002 7.002 0 00-7-7" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" vector-effect="non-scaling-stroke" />
+                          </svg> <span class="sr-only">Loading</span>
+                        </span>
+                        <span class="ml-2 color-fg-muted f6 js-pinned-items-reorder-message" role="status"
+                          aria-live="polite" data-error-text="Something went wrong."
+                          data-success-text="Order updated."></span>
+                      </h2>
+
+                        <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4">
+
+                        <li v-for="repo in recentCreatedRepo" class="mb-3 d-flex flex-content-stretch col-12 col-md-6 col-lg-6">
+                          <div class="Box pinned-item-list-item d-flex p-3 width-full public source">
+                            <div class="pinned-item-list-item-content">
+                              <div class="d-flex v-align-middle mr-2">
+                                <span data-view-component="true" class="position-relative"><a id="410462296"
+                                    href="/soniyav20/name_generator" data-view-component="true"
+                                    class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo"> {{ repo["name"] }} </span></a></span> <span
+                                  class="flex-auto text-right">
+                                  <span></span><span class="Label Label--secondary v-align-middle ">Public</span>
+                                </span>
+                              </div>
+
+
+                              <p class="pinned-item-desc color-fg-muted text-small d-block mt-2 mb-3">
+
+                              </p>
+
+                              <p class="mb-0 f6 color-fg-muted">
+                                <span v-if="recentCreatedRepoWithLanguage[`${repo[`name`]}`]" class="d-inline-block mr-3">
+                                  <span class="repo-language-color" :style="`background-color: ${recentCreatedRepoWithLanguage[`${repo[`name`]}`]?languageFrameworkColors[recentCreatedRepoWithLanguage[`${repo[`name`]}`].toLowerCase()]:null}`"></span>
+                                  <span class="ml-1" itemprop="programmingLanguage">{{ recentCreatedRepoWithLanguage[`${repo["name"]}`] }}</span>
+                                </span>
+
+                                <a href="/soniyav20/name_generator/stargazers" class="pinned-item-meta Link--muted">
+                                  <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
+                                    width="16" data-view-component="true" class="octicon octicon-star">
+                                    <path
+                                      d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z">
+                                    </path>
+                                  </svg>
+                                  1
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+
+                        
+                      </ol>
+
+                      <!-- <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4">
+
+                        <li class="mb-3 d-flex flex-content-stretch col-12 col-md-6 col-lg-6">
+                          <div class="Box pinned-item-list-item d-flex p-3 width-full public source">
+                            <div class="pinned-item-list-item-content">
+                              <div class="d-flex v-align-middle mr-2">
+                                <span data-view-component="true" class="position-relative"><a id="410462296"
+                                    href="/soniyav20/name_generator" data-view-component="true"
+                                    class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
+                                      name_generator
+                                    </span></a> <tool-tip id="tooltip-289f3c85-a78c-45d6-ad9f-297774bba047"
+                                    for="410462296" popover="manual" data-direction="s" data-type="description"
+                                    data-view-component="true"
+                                    class="sr-only position-absolute">name_generator</tool-tip></span> <span
+                                  class="flex-auto text-right">
+                                  <span></span><span class="Label Label--secondary v-align-middle ">Public</span>
+                                </span>
+                              </div>
+
+
+                              <p class="pinned-item-desc color-fg-muted text-small d-block mt-2 mb-3">
+
+                              </p>
+
+                              <p class="mb-0 f6 color-fg-muted">
+                                <span class="d-inline-block mr-3">
+                                  <span class="repo-language-color" style="background-color: #00B4AB"></span>
+                                  <span class="ml-1" itemprop="programmingLanguage">Dart</span>
+                                </span>
+
+                                <a href="/soniyav20/name_generator/stargazers" class="pinned-item-meta Link--muted">
+                                  <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
+                                    width="16" data-view-component="true" class="octicon octicon-star">
+                                    <path
+                                      d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z">
+                                    </path>
+                                  </svg>
+                                  1
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="mb-3 d-flex flex-content-stretch col-12 col-md-6 col-lg-6">
+                          <div class="Box pinned-item-list-item d-flex p-3 width-full public source">
+                            <div class="pinned-item-list-item-content">
+                              <div class="d-flex v-align-middle mr-2">
+                                <span data-view-component="true" class="position-relative"><a id="417581251"
+                                    href="/soniyav20/login_app" data-view-component="true"
+                                    class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
+                                      login_app
+                                    </span></a> <tool-tip id="tooltip-915bd2d8-87b2-40e6-a7ba-6285e40ff598"
+                                    for="417581251" popover="manual" data-direction="s" data-type="description"
+                                    data-view-component="true"
+                                    class="sr-only position-absolute">login_app</tool-tip></span> <span
+                                  class="flex-auto text-right">
+                                  <span></span><span class="Label Label--secondary v-align-middle ">Public</span>
+                                </span>
+                              </div>
+
+
+                              <p class="pinned-item-desc color-fg-muted text-small d-block mt-2 mb-3">
+
+                              </p>
+
+                              <p class="mb-0 f6 color-fg-muted">
+                                <span class="d-inline-block mr-3">
+                                  <span class="repo-language-color" style="background-color: #00B4AB"></span>
+                                  <span itemprop="programmingLanguage">Dart</span>
+                                </span>
+
+                                <a href="/soniyav20/login_app/stargazers" class="pinned-item-meta Link--muted">
+                                  <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
+                                    width="16" data-view-component="true" class="octicon octicon-star">
+                                    <path
+                                      d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z">
+                                    </path>
+                                  </svg>
+                                  1
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="mb-3 d-flex flex-content-stretch col-12 col-md-6 col-lg-6">
+                          <div class="Box pinned-item-list-item d-flex p-3 width-full public source">
+                            <div class="pinned-item-list-item-content">
+                              <div class="d-flex v-align-middle mr-2">
+                                <span data-view-component="true" class="position-relative"><a id="419948209"
+                                    href="/soniyav20/voice_to_text" data-view-component="true"
+                                    class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
+                                      voice_to_text
+                                    </span></a> <tool-tip id="tooltip-6838335f-ff06-49bd-a841-2cc2e43a9784"
+                                    for="419948209" popover="manual" data-direction="s" data-type="description"
+                                    data-view-component="true"
+                                    class="sr-only position-absolute">voice_to_text</tool-tip></span> <span
+                                  class="flex-auto text-right">
+                                  <span></span><span class="Label Label--secondary v-align-middle ">Public</span>
+                                </span>
+                              </div>
+
+
+                              <p class="pinned-item-desc color-fg-muted text-small d-block mt-2 mb-3">
+
+                              </p>
+
+                              <p class="mb-0 f6 color-fg-muted">
+                                <span class="d-inline-block mr-3">
+                                  <span class="repo-language-color" style="background-color: #00B4AB"></span>
+                                  <span itemprop="programmingLanguage">Dart</span>
+                                </span>
+
+                                <a href="/soniyav20/voice_to_text/stargazers" class="pinned-item-meta Link--muted">
+                                  <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
+                                    width="16" data-view-component="true" class="octicon octicon-star">
+                                    <path
+                                      d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z">
+                                    </path>
+                                  </svg>
+                                  1
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="mb-3 d-flex flex-content-stretch col-12 col-md-6 col-lg-6">
+                          <div class="Box pinned-item-list-item d-flex p-3 width-full public source">
+                            <div class="pinned-item-list-item-content">
+                              <div class="d-flex v-align-middle mr-2">
+                                <span data-view-component="true" class="position-relative"><a id="758605303"
+                                    href="/soniyav20/ml_image_classification" data-view-component="true"
+                                    class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
+                                      ml_image_classification
+                                    </span></a> <tool-tip id="tooltip-7386cf8e-c186-448f-af3d-5d2941a88623"
+                                    for="758605303" popover="manual" data-direction="s" data-type="description"
+                                    data-view-component="true"
+                                    class="sr-only position-absolute">ml_image_classification</tool-tip></span> <span
+                                  class="flex-auto text-right">
+                                  <span></span><span class="Label Label--secondary v-align-middle ">Public</span>
+                                </span>
+                              </div>
+
+
+                              <p class="pinned-item-desc color-fg-muted text-small d-block mt-2 mb-3">
+
+                              </p>
+
+                              <p class="mb-0 f6 color-fg-muted">
+                                <span class="d-inline-block mr-3">
+                                  <span class="repo-language-color" style="background-color: #00B4AB"></span>
+                                  <span itemprop="programmingLanguage">Dart</span>
+                                </span>
+
+                                <a href="/soniyav20/ml_image_classification/stargazers"
+                                  class="pinned-item-meta Link--muted">
+                                  <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
+                                    width="16" data-view-component="true" class="octicon octicon-star">
+                                    <path
+                                      d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z">
+                                    </path>
+                                  </svg>
+                                  1
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="mb-3 d-flex flex-content-stretch col-12 col-md-6 col-lg-6">
+                          <div class="Box pinned-item-list-item d-flex p-3 width-full public source">
+                            <div class="pinned-item-list-item-content">
+                              <div class="d-flex v-align-middle mr-2">
+                                <span data-view-component="true" class="position-relative"><a id="845836211"
+                                    href="/soniyav20/sih_isl" data-view-component="true"
+                                    class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
+                                      sih_isl
+                                    </span></a> <tool-tip id="tooltip-19b5d061-e493-4284-bc0a-e351ed9ca42d"
+                                    for="845836211" popover="manual" data-direction="s" data-type="description"
+                                    data-view-component="true"
+                                    class="sr-only position-absolute">sih_isl</tool-tip></span> <span
+                                  class="flex-auto text-right">
+                                  <span></span><span class="Label Label--secondary v-align-middle ">Public</span>
+                                </span>
+                              </div>
+
+
+                              <p class="pinned-item-desc color-fg-muted text-small d-block mt-2 mb-3">
+
+                              </p>
+
+                              <p class="mb-0 f6 color-fg-muted">
+                                <span class="d-inline-block mr-3">
+                                  <span class="repo-language-color" style="background-color: #00B4AB"></span>
+                                  <span itemprop="programmingLanguage">Dart</span>
+                                </span>
+
+                                <a href="/soniyav20/sih_isl/stargazers" class="pinned-item-meta Link--muted">
+                                  <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
+                                    width="16" data-view-component="true" class="octicon octicon-star">
+                                    <path
+                                      d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z">
+                                    </path>
+                                  </svg>
+                                  1
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="mb-3 d-flex flex-content-stretch col-12 col-md-6 col-lg-6">
+                          <div class="Box pinned-item-list-item d-flex p-3 width-full public source">
+                            <div class="pinned-item-list-item-content">
+                              <div class="d-flex v-align-middle mr-2">
+                                <span data-view-component="true" class="position-relative"><a id="891553129"
+                                    href="/soniyav20/dlc_lab_exps" data-view-component="true"
+                                    class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
+                                      dlc_lab_exps
+                                    </span></a> <tool-tip id="tooltip-e21b415f-4bad-4f78-8072-e63c62bac1e9"
+                                    for="891553129" popover="manual" data-direction="s" data-type="description"
+                                    data-view-component="true"
+                                    class="sr-only position-absolute">dlc_lab_exps</tool-tip></span> <span
+                                  class="flex-auto text-right">
+                                  <span></span><span class="Label Label--secondary v-align-middle ">Public</span>
+                                </span>
+                              </div>
+
+
+                              <p class="pinned-item-desc color-fg-muted text-small d-block mt-2 mb-3">
+
+                              </p>
+
+                              <p class="mb-0 f6 color-fg-muted">
+                                <span class="d-inline-block mr-3">
+                                  <span class="repo-language-color" style="background-color: #DA5B0B"></span>
+                                  <span itemprop="programmingLanguage">Jupyter Notebook</span>
+                                </span>
+
+                                <a href="/soniyav20/dlc_lab_exps/stargazers" class="pinned-item-meta Link--muted">
+                                  <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
+                                    width="16" data-view-component="true" class="octicon octicon-star">
+                                    <path
+                                      d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z">
+                                    </path>
+                                  </svg>
+                                  1
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                      </ol> -->
+
+                    </div>
+
+                  </div>
+                        <!--  -->
                     </div>
 
 
