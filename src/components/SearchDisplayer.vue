@@ -360,7 +360,7 @@ export default {
 
 
                               <p class="pinned-item-desc color-fg-muted text-small d-block mt-2 mb-3">
-
+                                {{ repo["description"] ? repo["description"] : "" }}
                               </p>
 
                               <p class="mb-0 f6 color-fg-muted">
