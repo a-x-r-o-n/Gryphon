@@ -37,7 +37,7 @@ export default {
           }
         };
         xhttp.open("GET", `${this.userData["repos_url"]}`, true);
-        xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
+        // xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
         xhttp.send();
       }
     },
@@ -52,7 +52,7 @@ export default {
           }
         };
         xhttp.open("GET", `https://api.github.com/users/${this.userData["login"]}/starred`, true);
-        xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
+        // xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
         xhttp.send();
       }
     },
@@ -68,7 +68,7 @@ export default {
         }
       }
       xhttp.open("GET", `https://api.github.com/repos/${this.userData["login"]}/${repoName}/languages`, true);
-      xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
+      // xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
       xhttp.send();
 
       
@@ -91,7 +91,7 @@ export default {
           }
         };
         xhttp.open("GET", `https://api.github.com/users/${this.userData["login"]}/repos?sort=created&direction=desc&per_page=6`, true);
-        xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
+        // xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
         xhttp.send();
 
       }
