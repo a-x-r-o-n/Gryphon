@@ -7,6 +7,7 @@ export default {
         return {
             languageFrameworkColors : {
                 "javascript": "#f1e05a",
+                "lean":"#000",
                 "python": "#3572A5",
                 "java": "#b07219",
                 "c++": "#f34b7d",
@@ -54,6 +55,20 @@ export default {
     methods: {
         getImageUrl(path) {
             return new URL(path, import.meta.url).href;
+        },
+        displayDescriptionTOPinnedRepos(description=""){
+            if(description.length>220){
+                let des = "";
+                for(let iterator = 0;iterator<=220;iterator++){
+                    if(description.length === iterator+1) break;
+                    des+=description[iterator];
+                }
+                des+= "...";
+                return des;
+            }
+            else{
+                return description;
+            }
         }
     }
 }
@@ -360,7 +375,7 @@ export default {
 
 
                               <p class="pinned-item-desc color-fg-muted text-small d-block mt-2 mb-3">
-                                {{ repo["description"] ? repo["description"] : "" }}
+                                {{ repo["description"] ? displayDescriptionTOPinnedRepos(repo["description"]) : "" }}
                               </p>
 
                               <p class="mb-0 f6 color-fg-muted">
