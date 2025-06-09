@@ -7,6 +7,7 @@ export default {
         return {
             languageFrameworkColors : {
                 "javascript": "#f1e05a",
+                "nix":"#7e7eff",
                 "lean":"#000",
                 "python": "#3572A5",
                 "java": "#b07219",

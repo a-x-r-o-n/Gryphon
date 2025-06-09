@@ -28,7 +28,8 @@ export default {
                 }
             }
             xhttp.open("GET", this.url + this.inputExtract);
-            // xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
+            console.log(this.gitt);
+            xhttp.setRequestHeader("Authorization", "Bearer " + self.gitt);
             xhttp.send();  
         }
     }

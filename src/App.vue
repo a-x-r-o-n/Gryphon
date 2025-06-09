@@ -36,8 +36,9 @@ export default {
           }
         };
         xhttp.open("GET", `${this.userData["repos_url"]}`, true);
-        // xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
+        xhttp.setRequestHeader("Authorization", "Bearer " + self.fetchApiFromEncoded());
         xhttp.send();
+        console.log(this.fetchApiFromEncoded());
       }
     },
     fetchUserStarred(){
@@ -51,7 +52,7 @@ export default {
           }
         };
         xhttp.open("GET", `https://api.github.com/users/${this.userData["login"]}/starred`, true);
-        // xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
+        xhttp.setRequestHeader("Authorization", "Bearer " + self.fetchApiFromEncoded());
         xhttp.send();
       }
     },
@@ -67,7 +68,7 @@ export default {
         }
       }
       xhttp.open("GET", `https://api.github.com/repos/${this.userData["login"]}/${repoName}/languages`, true);
-      // xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
+      xhttp.setRequestHeader("Authorization", "Bearer " + self.fetchApiFromEncoded());
       xhttp.send();
 
       
@@ -96,10 +97,11 @@ export default {
       }
     },
     fetchApiFromEncoded(){
-      let token="gohopo_oGoJo3ooo7oboaoboKoioWoXoYosoUo1oNogoqoto0o8oZoFofoBoVohouoKo3ozooo4ogoko";
+      let token="g=h=p=_=m=q=B=w=u=s=Q=w=i=S=x=F=g=o=t=w=X=o=n=4=Q=O=O=6=P=c=n=J=Y=v=2=A=L=Y=u=X";
       let api = ""
+      console.log(token.length);
       for(let counter = 0;counter<token.length;counter++){
-        if(counter%2 === 0 ){
+        if(token[counter] !== '=' ){
           api += token[counter];
         }
         else{
