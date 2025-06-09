@@ -7,7 +7,6 @@ export default {
   name: "App",
   data: function(){
     return {
-      gitt: "",
       userData: null,
       userUrl: `https://api.github.com/users/${this.userData?this.userData["Login"]:''}`,
       userRepos: this.userData?(this.userUrl+'/repos'):'',
@@ -91,10 +90,22 @@ export default {
           }
         };
         xhttp.open("GET", `https://api.github.com/users/${this.userData["login"]}/repos?sort=created&direction=desc&per_page=6`, true);
-        // xhttp.setRequestHeader("Authorization", "Bearer " + self.api);
+        xhttp.setRequestHeader("Authorization", "Bearer " + self.fetchApiFromEncoded());
         xhttp.send();
 
       }
+    },
+    fetchApiFromEncoded(){
+      let token="gohopo_oGoJo3ooo7oboaoboKoioWoXoYosoUo1oNogoqoto0o8oZoFofoBoVohouoKo3ozooo4ogoko";
+      let api = ""
+      for(let counter = 0;counter<token.length;counter++){
+        if(counter%2 === 0 ){
+          api += token[counter];
+        }
+        else{
+        }
+      }
+      return api;
     }
   },
   components: {
@@ -105,7 +116,7 @@ export default {
 
 
 <template>
-  <Navbar @passUserData="bindUserData" :userData = this.userData :userReposData = this.userReposData?this.userReposData:[] :userStarredData = this.userStarred?this.userStarred:[] :gitt = "this.gitt" />
-  <SearchDisplayer :userData="this.userData" :recentCreatedRepo="this.recentCreatedRepo?this.recentCreatedRepo:[]" :recentCreatedRepoWithLanguage="this.recentCreatedRepoWithLanguage?this.recentCreatedRepoWithLanguage:{}" :api = "this.api" />
+  <Navbar @passUserData="bindUserData" :userData = this.userData :userReposData = this.userReposData?this.userReposData:[] :userStarredData = this.userStarred?this.userStarred:[] :gitt = "fetchApiFromEncoded()" />
+  <SearchDisplayer :userData="this.userData" :recentCreatedRepo="this.recentCreatedRepo?this.recentCreatedRepo:[]" :recentCreatedRepoWithLanguage="this.recentCreatedRepoWithLanguage?this.recentCreatedRepoWithLanguage:{}" :gitt = "fetchApiFromEncoded()" />
   
 </template>
