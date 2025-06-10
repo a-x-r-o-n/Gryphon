@@ -105,6 +105,7 @@ export default {
 
                                             </span>
                                         </h1>
+
                                     </div>
                                 </div>
                                 <div class="d-flex flex-column">
@@ -153,6 +154,7 @@ export default {
                                     <div class="js-profile-editable-area d-flex flex-column d-md-block">
                                         <div class="p-note user-profile-bio mb-3 js-user-profile-bio f4"
                                             data-bio-text="" hidden></div>
+                                            
 
 
                                         <div class="flex-order-1 flex-md-order-none mt-2 mt-md-0">
@@ -185,21 +187,24 @@ export default {
 
 
                                         </ul>
+                                        <div>
+                                            <p>{{ userData?userData["bio"]:"" }}</p>
+                                        </div>
                                     </div>
 
                                 </div>
 
                                 <div class="border-top color-border-muted pt-3 mt-3 d-none d-md-block">
                                     <h2 class="h4 mb-2"><a href="/a-x-r-o-n?tab=achievements"
-                                        class="Link--primary mb-2">Achievements</a></h2>
-                                    <div class="d-flex flex-wrap"><a href="/a-x-r-o-n?achievement=pull-shark&amp;tab=achievements"
+                                        class="Link--primary mb-2">Links</a></h2>
+                                    <div class="d-flex flex-wrap" style="gap: 5px;"><a v-if="userData?userData['blog']:null" target="_blank" :href="userData?userData['blog']:null"
                                         class="position-relative"><img
-                                        src="https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png"
+                                        src="../assets/images/website-svg.svg"
                                         data-hovercard-type="achievement"
                                         data-hovercard-url="/users/a-x-r-o-n/achievements/pull-shark/detail?hovercard=1" width="64"
                                         alt="Achievement: Pull Shark" data-view-component="true"
-                                        class="achievement-badge-sidebar" /></a><a
-                                        href="/a-x-r-o-n?achievement=quickdraw&amp;tab=achievements" class="position-relative"><img
+                                        class="achievement-badge-sidebar" /></a>
+                                        <a v-if="userData?userData['twitter_username']:null" target="_blank" :href="`https://www.x.com/${userData?userData['twitter_username']:null}`" class="position-relative"><img
                                         src="https://github.githubassets.com/assets/quickdraw-default-39c6aec8ff89.png"
                                         data-hovercard-type="achievement"
                                         data-hovercard-url="/users/a-x-r-o-n/achievements/quickdraw/detail?hovercard=1" width="64"
@@ -392,7 +397,7 @@ export default {
                                       d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z">
                                     </path>
                                   </svg>
-                                  1
+                                  {{ userData?repo["stargazers_count"]:12 }}
                                 </a>
                               </p>
                             </div>

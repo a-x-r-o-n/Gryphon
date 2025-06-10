@@ -76,8 +76,8 @@ export default {
                     </path>
                   </svg>
                   <span data-view-component="true">Repositories</span>
-                  <span v-if="userReposData.length ===0" hidden="hidden" :title="`MF has ${userReposData?userReposData.length:0} repositories`" data-view-component="true" class="Counter">{{ userReposData?userReposData.length:0 }}</span>
-                  <span v-else  :title="`MF has ${userReposData?userReposData.length:0} repositories`" data-view-component="true" class="Counter">{{ userReposData?userReposData.length:0 }}{{ console.log("log at Navbar.vue: \n",userReposData) }}</span>
+                  <span v-if="userReposData.length ===0" hidden="hidden" :title="`Bro has ${userReposData?userReposData.length:0} repositories`" data-view-component="true" class="Counter">{{ userReposData?userReposData.length:0 }}</span>
+                  <span v-else  :title="`Bro has ${userReposData?userReposData.length:0} repositories`" data-view-component="true" class="Counter">{{ userReposData?userReposData.length:0 }}</span>
                     </a>
                 </li>
                 <li data-view-component="true" class="d-inline-flex">
