@@ -280,7 +280,15 @@ export default {
                                         data-canonical-src="https://github-readme-stats.vercel.app/api?username=soniyav20&amp;theme=transparent&amp;hide_border=false&amp;include_all_commits=true&amp;count_private=true"
                                         style="max-width: 100%;"></a>
                                     </p>
+                                    <!-- <p>
+                                        <a target="_blank" rel="noopener noreferrer nofollow"
+                                        href="https://camo.githubusercontent.com/af6d93cce46283b585fffba7f1ff9d55fb329eef0013975ca8a316705a3a0ded/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f6d6f73742d636f6d6d69742d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
+                                        :src="`http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=${userData?userData['login']:'a'}&theme=transparent`"
+                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=soniyav20&amp;theme=transparent"
+                                        style="display: block; margin: 0px auto;max-width: 100%;"></a>
 
+
+                                    </p> -->
                                     <p dir="auto" style="display: flex; justify-content: space-evenly;">
                                         <a target="_blank" rel="noopener noreferrer nofollow"
                                         href="https://camo.githubusercontent.com/ab960ba950334e2f3f537e77c2bd1aa515b9bb7df044a06074edaab906692524/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f7265706f732d7065722d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
@@ -289,17 +297,19 @@ export default {
                                         style="max-width: auto;"></a>
 
                                         <a target="_blank" rel="noopener noreferrer nofollow"
-                                        href="https://camo.githubusercontent.com/fd66e543ec4e2f73c5a4c5ced3a590f8f69d3a8ffc47ef2bd7bcdc567aa6db90/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f70726f647563746976652d74696d653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
-                                        :src="`http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=${userData?userData['login']:'a'}&theme=transparent`"
-                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=soniyav20&amp;theme=transparent"
-                                        style="max-width: auto;"></a>
+                                        href="https://camo.githubusercontent.com/af6d93cce46283b585fffba7f1ff9d55fb329eef0013975ca8a316705a3a0ded/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f6d6f73742d636f6d6d69742d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
+                                        :src="`https://github-readme-stats.vercel.app/api/top-langs/?username=${userData?userData['login']:'a'}&theme=transparent&hide_border=true`"
+                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=soniyav20&amp;theme=transparent"
+                                        style="max-width: 100%;"></a>
 
                                         <a target="_blank" rel="noopener noreferrer nofollow"
                                         href="https://camo.githubusercontent.com/af6d93cce46283b585fffba7f1ff9d55fb329eef0013975ca8a316705a3a0ded/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f6d6f73742d636f6d6d69742d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
                                         :src="`http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=${userData?userData['login']:'a'}&theme=transparent`"
                                         data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=soniyav20&amp;theme=transparent"
                                         style="max-width: 100%;"></a>
+                                        
                                     </p>
+
                                     <!-- <p dir="auto" style="display: flex; justify-content: space-evenly;">
                                         <a target="_blank" rel="noopener noreferrer nofollow"
                                         href="https://camo.githubusercontent.com/ab960ba950334e2f3f537e77c2bd1aa515b9bb7df044a06074edaab906692524/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f7265706f732d7065722d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
