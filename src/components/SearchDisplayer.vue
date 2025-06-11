@@ -79,7 +79,7 @@ export default {
     <div class="application-main ">
         <main>
             <div class="container-xl px-3 px-md-4 px-lg-5 mt-2">
-                <div
+                <div v-if="this.userData"
                     class="Layout Layout--flowRow-until-md Layout--sidebarPosition-start Layout--sidebarPosition-flowRow-start">
                     <div class="Layout-sidebar">
                         <div class="h-card mt-5">
@@ -249,7 +249,7 @@ export default {
                                 <div class="d-flex flex-justify-between">
                                     <div class="text-mono text-small mb-3">
                                         <a href="/soniyav20/soniyav20" class="no-underline Link--primary">{{userData?userData["login"]:'a'}}</a><span
-                            class="color-fg-muted d-inline-block" style="padding:0px 2px;">/</span>README<span
+                            class="color-fg-muted d-inline-block" style="padding:0px 2px;">/</span>STATS<span
                             class="color-fg-muted">.md</span>
                                     </div>
                                 </div>
@@ -681,6 +681,9 @@ export default {
 
 
 
+                </div>
+                <div v-else>
+                    
                 </div>
             </div>
         </main>
