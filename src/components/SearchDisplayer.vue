@@ -2,7 +2,7 @@
 import "../assets/main.css";
 export default {
     name: "SearchDisplayer",
-    props: {userData:Object,recentCreatedRepo:{type:Array,default: () => {}},recentCreatedRepoWithLanguage:{type:Object,default: () => {}}, gitt:String}, 
+    props: {userData:Object,userReposData:{type:Array,default: () => {}},recentCreatedRepo:{type:Array,default: () => {}},recentCreatedRepoWithLanguage:{type:Object,default: () => {}}, gitt:String, pageViewing:Number, pageViewType:String}, 
     data: function () {
         return {
             languageFrameworkColors : {
@@ -57,10 +57,10 @@ export default {
         getImageUrl(path) {
             return new URL(path, import.meta.url).href;
         },
-        displayDescriptionTOPinnedRepos(description=""){
+        displayDescriptionTOPinnedRepos(description="",numChars=220){
             if(description.length>220){
                 let des = "";
-                for(let iterator = 0;iterator<=220;iterator++){
+                for(let iterator = 0;iterator<=numChars;iterator++){
                     if(description.length === iterator+1) break;
                     des+=description[iterator];
                 }
@@ -70,7 +70,16 @@ export default {
             else{
                 return description;
             }
-        }
+        },
+        formatDate(dateString) {
+  const date = new Date(dateString);
+  const options = { month: 'short', day: 'numeric', year: 'numeric' };
+  const formatted = date.toLocaleDateString('en-US', options);
+  
+  const [monthDay, year] = formatted.split(', ');
+  return `${monthDay},\n${year}`;
+}
+
     }
 }
 </script>
@@ -243,7 +252,7 @@ export default {
                         </div>
                     </div>
 
-                    <div data-view-component="true" class="Layout-main">
+                    <div v-if="this.pageViewing === 0" data-view-component="true" class="Layout-main">
                         <div class="Box mt-4 ">
                             <div class="Box-body p-4">
                                 <div class="d-flex flex-justify-between">
@@ -677,7 +686,74 @@ export default {
 
                   </div>
                         <!--  -->
-                    </div>
+            </div>
+            <div v-else-if="this.pageViewing === 1" data-view-component="true" class="Layout-main">
+                <div class="pl-5" id="user-repositories-list" data-hpc>
+                    <ul data-filterable-for="your-repos-filter" data-filterable-type="substring">
+                        <li class="col-12 d-flex flex-justify-between width-full py-4 border-bottom color-border-muted public source"></li>
+                        <li v-for="repo in userReposData" class="col-12 d-flex flex-justify-between width-full py-4 border-bottom color-border-muted public source" >
+                            <div class="col-10 col-lg-9 d-inline-block">
+                                <div class="d-inline-block mb-1">
+                                    <h3 class="wb-break-all">
+                                        <a href="/A/client-rest-framework" >
+                                            {{ repo["name"] }}</a>
+                                        <span></span><span class="Label Label--secondary v-align-middle ml-1 mb-1">{{ repo["visibility"]==="public"?"Public":"Private" }}</span>
+                                    </h3>
+                                </div>
+                                <div>
+                                    <p class="col-9 d-inline-block color-fg-muted mb-2 pr-4">
+                                    {{repo["description"] ? displayDescriptionTOPinnedRepos(repo["description"],200) : ""}}
+                                    </p>
+                                </div>
+                                <div class="topics-row-container d-inline-flex flex-wrap flex-items-center f6 my-1">
+                                    <a v-for="topic in repo[`topics`]" data-ga-click="Topic, repository list" data-octo-click="topic_click"
+                                    data-octo-dimensions="topic:frontend,repository_id:605965430,repository_nwo:A/client-rest-framework,repository_public:true,repository_is_fork:false"
+                                    href="/topics/frontend" title="Topic: frontend" data-view-component="true"
+                                    class="topic-tag topic-tag-link f6 my-1">
+                                    {{ topic }}
+                                    </a>
+                                </div>
+
+                                <div class="f6 color-fg-muted mt-2">
+
+                            <span v-if="repo[`language`]" class="ml-0 mr-3">
+                              <span class="repo-language-color" :style="`background-color: ${languageFrameworkColors[repo[`language`].toLowerCase()]}`"></span>
+                              <span itemprop="programmingLanguage" class="ml-1">{{repo["language"]}}</span>
+                            </span>
+
+                            <a class="Link--muted mr-3" href="/A/client-rest-framework/stargazers">
+                              <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                data-view-component="true" class="octicon octicon-star">
+                                <path
+                                  d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z">
+                                </path>
+                              </svg>
+                              {{ repo["stargazers_count"] }}
+                            </a>
+
+                            <span class="mr-3">
+                              <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                data-view-component="true" class="octicon octicon-law mr-1">
+                                <path
+                                  d="M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.88 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.88 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z">
+                                </path>
+                              </svg>MIT License
+                            </span>
+
+
+                            Updated <relative-time datetime="2025-06-05T15:15:42Z" class="no-wrap">{{ formatDate(repo['updated_at']) }}</relative-time>
+                          </div>
+
+
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div v-else-if="this.pageViewing === 2"></div>
+            <div v-else-if="this.pageViewing === 3"></div>
+            <div v-else-if="this.pageViewing === 4"></div>
 
 
 
@@ -703,7 +779,7 @@ export default {
 }
 
 .Button-content>:not(:last-child) {
-    margin-right: var(--control-medium-gap)
+    margin-right: var(--control-medium-gap);
 }
 
 .Button-content--alignStart {

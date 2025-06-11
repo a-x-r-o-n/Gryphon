@@ -14,7 +14,9 @@ export default {
       userReposData: null,
       tempPlaceholder: null,
       recentCreatedRepo: [],
-      recentCreatedRepoWithLanguage: {}
+      recentCreatedRepoWithLanguage: {},
+      pageViewing: 0,
+      pageViewType: ""
     }
   },
   methods: {
@@ -84,10 +86,10 @@ export default {
             self.recentCreatedRepo = JSON.parse(this.responseText);
             // //console.log("log at App.vue:\n",this.userReposData);
             self.recentCreatedRepo.forEach( repo => {
-              console.log(`sending ${repo["name"]} for fetching Top language`);
+              //console.log(`sending ${repo["name"]} for fetching Top language`);
             self.fetchTopLanguageUsedInRepo(repo["name"]);
         });
-        console.log(self.recentCreatedRepoWithLanguage);
+        //console.log(self.recentCreatedRepoWithLanguage);
           }
         };
         xhttp.open("GET", `https://api.github.com/users/${this.userData["login"]}/repos?sort=created&direction=desc&per_page=6`, true);
@@ -99,7 +101,7 @@ export default {
     fetchApiFromEncoded(){
       let token="g=h=p=_=m=q=B=w=u=s=Q=w=i=S=x=F=g=o=t=w=X=o=n=4=Q=O=O=6=P=c=n=J=Y=v=2=A=L=Y=u=X";
       let api = ""
-      console.log(token.length);
+      //console.log(token.length);
       for(let counter = 0;counter<token.length;counter++){
         if(token[counter] !== '=' ){
           api += token[counter];
@@ -108,6 +110,13 @@ export default {
         }
       }
       return api;
+    },
+    changePageView(view,type){
+      this.pageViewing = view;
+      this.pageViewType = type;
+
+      console.log("view changed to => ",this.pageViewing," type => ",this.pageViewType);
+
     }
   },
   components: {
@@ -118,7 +127,7 @@ export default {
 
 
 <template>
-  <Navbar @passUserData="bindUserData" :userData = this.userData :userReposData = this.userReposData?this.userReposData:[] :userStarredData = this.userStarred?this.userStarred:[] :gitt = "fetchApiFromEncoded()" />
-  <SearchDisplayer :userData="this.userData" :recentCreatedRepo="this.recentCreatedRepo?this.recentCreatedRepo:[]" :recentCreatedRepoWithLanguage="this.recentCreatedRepoWithLanguage?this.recentCreatedRepoWithLanguage:{}" :gitt = "fetchApiFromEncoded()" />
+  <Navbar @changePage="changePageView" @passUserData="bindUserData" :userData = this.userData :userReposData = this.userReposData?this.userReposData:[] :userStarredData = this.userStarred?this.userStarred:[] :gitt = "fetchApiFromEncoded()" :pageViewing = this.pageViewing :pageViewType = this.pageViewType />
+  <SearchDisplayer :userData="this.userData" :userReposData="this.userReposData?this.userReposData:[]" :recentCreatedRepo="this.recentCreatedRepo?this.recentCreatedRepo:[]" :recentCreatedRepoWithLanguage="this.recentCreatedRepoWithLanguage?this.recentCreatedRepoWithLanguage:{}" :gitt = "fetchApiFromEncoded()" :pageViewing = this.pageViewing :pageViewType = this.pageViewType />
   
 </template>
