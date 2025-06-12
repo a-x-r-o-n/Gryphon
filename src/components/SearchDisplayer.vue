@@ -257,7 +257,7 @@ export default {
                             <div class="Box-body p-4">
                                 <div class="d-flex flex-justify-between">
                                     <div class="text-mono text-small mb-3">
-                                        <a href="/soniyav20/soniyav20" class="no-underline Link--primary">{{userData?userData["login"]:'a'}}</a><span
+                                        <a href="/a-x-r-o-n/a-x-r-o-n" class="no-underline Link--primary">{{userData?userData["login"]:'a'}}</a><span
                             class="color-fg-muted d-inline-block" style="padding:0px 2px;">/</span>STATS<span
                             class="color-fg-muted">.md</span>
                                     </div>
@@ -279,21 +279,21 @@ export default {
                                         href="https://camo.githubusercontent.com/60af0bb8646fa8afb66b6bf20fc246d0cc5e223c639b92efe15ea664797ffe8c/68747470733a2f2f6769746875622d726561646d652d73747265616b2d73746174732e6865726f6b756170702e636f6d2f3f757365723d736f6e697961763230267468656d653d6461726b26686964655f626f726465723d66616c7365"><img
                                         :src="`https://github-readme-streak-stats.herokuapp.com/?user=${userData?userData['login']:'a'}&theme=transparent&hide_border=true`"
                                         alt=""
-                                        data-canonical-src="https://github-readme-streak-stats.herokuapp.com/?user=soniyav20&amp;theme=transparent&amp;hide_border=false"
+                                        data-canonical-src="https://github-readme-streak-stats.herokuapp.com/?user=a-x-r-o-n&amp;theme=transparent&amp;hide_border=false"
                                         style="max-width: 100%;"></a>
 
                                         <a target="_blank" rel="noopener noreferrer nofollow"
                                         href="https://camo.githubusercontent.com/dd64b5d220a8bf4445005a129d1bf452c9cc671429974d0bc971e2d2221a0088/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d736f6e697961763230267468656d653d6461726b26686964655f626f726465723d66616c736526696e636c7564655f616c6c5f636f6d6d6974733d7472756526636f756e745f707269766174653d74727565"><img
                                         :src="`https://github-readme-stats.vercel.app/api?username=${userData?userData['login']:'a'}&theme=transparent&hide_border=true`"
                                         alt=""
-                                        data-canonical-src="https://github-readme-stats.vercel.app/api?username=soniyav20&amp;theme=transparent&amp;hide_border=false&amp;include_all_commits=true&amp;count_private=true"
+                                        data-canonical-src="https://github-readme-stats.vercel.app/api?username=a-x-r-o-n&amp;theme=transparent&amp;hide_border=false&amp;include_all_commits=true&amp;count_private=true"
                                         style="max-width: 100%;"></a>
                                     </p>
                                     <!-- <p>
                                         <a target="_blank" rel="noopener noreferrer nofollow"
                                         href="https://camo.githubusercontent.com/af6d93cce46283b585fffba7f1ff9d55fb329eef0013975ca8a316705a3a0ded/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f6d6f73742d636f6d6d69742d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
                                         :src="`http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=${userData?userData['login']:'a'}&theme=transparent`"
-                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=soniyav20&amp;theme=transparent"
+                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=a-x-r-o-n&amp;theme=transparent"
                                         style="display: block; margin: 0px auto;max-width: 100%;"></a>
 
 
@@ -302,19 +302,19 @@ export default {
                                         <a target="_blank" rel="noopener noreferrer nofollow"
                                         href="https://camo.githubusercontent.com/ab960ba950334e2f3f537e77c2bd1aa515b9bb7df044a06074edaab906692524/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f7265706f732d7065722d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
                                         :src="`http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=${userData?userData['login']:'a'}&theme=transparent`"
-                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=soniyav20&amp;theme=transparent"
+                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=a-x-r-o-n&amp;theme=transparent"
                                         style="max-width: auto;"></a>
 
                                         <a target="_blank" rel="noopener noreferrer nofollow"
                                         href="https://camo.githubusercontent.com/af6d93cce46283b585fffba7f1ff9d55fb329eef0013975ca8a316705a3a0ded/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f6d6f73742d636f6d6d69742d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
                                         :src="`https://github-readme-stats.vercel.app/api/top-langs/?username=${userData?userData['login']:'a'}&theme=transparent&hide_border=true`"
-                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=soniyav20&amp;theme=transparent"
+                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=a-x-r-o-n&amp;theme=transparent"
                                         style="max-width: 100%;"></a>
 
                                         <a target="_blank" rel="noopener noreferrer nofollow"
                                         href="https://camo.githubusercontent.com/af6d93cce46283b585fffba7f1ff9d55fb329eef0013975ca8a316705a3a0ded/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f6d6f73742d636f6d6d69742d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
                                         :src="`http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=${userData?userData['login']:'a'}&theme=transparent`"
-                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=soniyav20&amp;theme=transparent"
+                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=a-x-r-o-n&amp;theme=transparent"
                                         style="max-width: 100%;"></a>
                                         
                                     </p>
@@ -323,7 +323,7 @@ export default {
                                         <a target="_blank" rel="noopener noreferrer nofollow"
                                         href="https://camo.githubusercontent.com/ab960ba950334e2f3f537e77c2bd1aa515b9bb7df044a06074edaab906692524/687474703a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f7265706f732d7065722d6c616e67756167653f757365726e616d653d736f6e697961763230267468656d653d6769746875625f6461726b"><img
                                         :src="`https://github-readme-stats.vercel.app/api/wakatime?username=${userData?userData['login']:''}&theme=transparent&hide_border=true`"
-                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=soniyav20&amp;theme=transparent"
+                                        data-canonical-src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=a-x-r-o-n&amp;theme=transparent"
                                         style="max-width: auto;"></a>
                                     </p> -->
                                     
@@ -354,7 +354,7 @@ export default {
                                         href="https://camo.githubusercontent.com/38df3110343df49889e447f4e3529f4d8c45a178123d4fc4ccf1e79f9ae56e40/68747470733a2f2f6769746875622d70726f66696c652d74726f7068792e76657263656c2e6170702f3f757365726e616d653d736f6e697961763230267468656d653d7261646963616c266e6f2d6672616d653d66616c7365266e6f2d62673d66616c7365266d617267696e2d773d34"><img
                                         :src="`https://github-profile-trophy.vercel.app/?username=${userData?userData['login']:'a'}&theme=darkhub`"
                                         alt=""
-                                        data-canonical-src="https://github-profile-trophy.vercel.app/?username=soniyav20&amp;theme=radical&amp;no-frame=false&amp;no-bg=false&amp;margin-w=4"
+                                        data-canonical-src="https://github-profile-trophy.vercel.app/?username=a-x-r-o-n&amp;theme=radical&amp;no-frame=false&amp;no-bg=false&amp;margin-w=4"
                                         style="max-width: 100%;"></a>
                                     </p>
                                     <!-- <img src="https://raw.githubusercontent.com/a-x-r-o-n//output/snake.svg" alt="Snake animation" /> -->
@@ -391,7 +391,7 @@ export default {
                             <div class="pinned-item-list-item-content">
                               <div class="d-flex v-align-middle mr-2">
                                 <span data-view-component="true" class="position-relative"><a id="410462296"
-                                    href="/soniyav20/name_generator" data-view-component="true"
+                                    href="/a-x-r-o-n/name_generator" data-view-component="true"
                                     class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo"> {{ repo["name"] }} </span></a></span> <span
                                   class="flex-auto text-right">
                                   <span></span><span class="Label Label--secondary v-align-middle ">Public</span>
@@ -409,7 +409,7 @@ export default {
                                   <span class="ml-1" itemprop="programmingLanguage">{{ recentCreatedRepoWithLanguage[`${repo["name"]}`] }}</span>
                                 </span>
 
-                                <a href="/soniyav20/name_generator/stargazers" class="pinned-item-meta Link--muted">
+                                <a href="/a-x-r-o-n/name_generator/stargazers" class="pinned-item-meta Link--muted">
                                   <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
                                     width="16" data-view-component="true" class="octicon octicon-star">
                                     <path
@@ -433,7 +433,7 @@ export default {
                             <div class="pinned-item-list-item-content">
                               <div class="d-flex v-align-middle mr-2">
                                 <span data-view-component="true" class="position-relative"><a id="410462296"
-                                    href="/soniyav20/name_generator" data-view-component="true"
+                                    href="/a-x-r-o-n/name_generator" data-view-component="true"
                                     class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
                                       name_generator
                                     </span></a> <tool-tip id="tooltip-289f3c85-a78c-45d6-ad9f-297774bba047"
@@ -456,7 +456,7 @@ export default {
                                   <span class="ml-1" itemprop="programmingLanguage">Dart</span>
                                 </span>
 
-                                <a href="/soniyav20/name_generator/stargazers" class="pinned-item-meta Link--muted">
+                                <a href="/a-x-r-o-n/name_generator/stargazers" class="pinned-item-meta Link--muted">
                                   <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
                                     width="16" data-view-component="true" class="octicon octicon-star">
                                     <path
@@ -475,7 +475,7 @@ export default {
                             <div class="pinned-item-list-item-content">
                               <div class="d-flex v-align-middle mr-2">
                                 <span data-view-component="true" class="position-relative"><a id="417581251"
-                                    href="/soniyav20/login_app" data-view-component="true"
+                                    href="/a-x-r-o-n/login_app" data-view-component="true"
                                     class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
                                       login_app
                                     </span></a> <tool-tip id="tooltip-915bd2d8-87b2-40e6-a7ba-6285e40ff598"
@@ -498,7 +498,7 @@ export default {
                                   <span itemprop="programmingLanguage">Dart</span>
                                 </span>
 
-                                <a href="/soniyav20/login_app/stargazers" class="pinned-item-meta Link--muted">
+                                <a href="/a-x-r-o-n/login_app/stargazers" class="pinned-item-meta Link--muted">
                                   <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
                                     width="16" data-view-component="true" class="octicon octicon-star">
                                     <path
@@ -517,7 +517,7 @@ export default {
                             <div class="pinned-item-list-item-content">
                               <div class="d-flex v-align-middle mr-2">
                                 <span data-view-component="true" class="position-relative"><a id="419948209"
-                                    href="/soniyav20/voice_to_text" data-view-component="true"
+                                    href="/a-x-r-o-n/voice_to_text" data-view-component="true"
                                     class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
                                       voice_to_text
                                     </span></a> <tool-tip id="tooltip-6838335f-ff06-49bd-a841-2cc2e43a9784"
@@ -540,7 +540,7 @@ export default {
                                   <span itemprop="programmingLanguage">Dart</span>
                                 </span>
 
-                                <a href="/soniyav20/voice_to_text/stargazers" class="pinned-item-meta Link--muted">
+                                <a href="/a-x-r-o-n/voice_to_text/stargazers" class="pinned-item-meta Link--muted">
                                   <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
                                     width="16" data-view-component="true" class="octicon octicon-star">
                                     <path
@@ -559,7 +559,7 @@ export default {
                             <div class="pinned-item-list-item-content">
                               <div class="d-flex v-align-middle mr-2">
                                 <span data-view-component="true" class="position-relative"><a id="758605303"
-                                    href="/soniyav20/ml_image_classification" data-view-component="true"
+                                    href="/a-x-r-o-n/ml_image_classification" data-view-component="true"
                                     class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
                                       ml_image_classification
                                     </span></a> <tool-tip id="tooltip-7386cf8e-c186-448f-af3d-5d2941a88623"
@@ -582,7 +582,7 @@ export default {
                                   <span itemprop="programmingLanguage">Dart</span>
                                 </span>
 
-                                <a href="/soniyav20/ml_image_classification/stargazers"
+                                <a href="/a-x-r-o-n/ml_image_classification/stargazers"
                                   class="pinned-item-meta Link--muted">
                                   <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
                                     width="16" data-view-component="true" class="octicon octicon-star">
@@ -602,7 +602,7 @@ export default {
                             <div class="pinned-item-list-item-content">
                               <div class="d-flex v-align-middle mr-2">
                                 <span data-view-component="true" class="position-relative"><a id="845836211"
-                                    href="/soniyav20/sih_isl" data-view-component="true"
+                                    href="/a-x-r-o-n/sih_isl" data-view-component="true"
                                     class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
                                       sih_isl
                                     </span></a> <tool-tip id="tooltip-19b5d061-e493-4284-bc0a-e351ed9ca42d"
@@ -625,7 +625,7 @@ export default {
                                   <span itemprop="programmingLanguage">Dart</span>
                                 </span>
 
-                                <a href="/soniyav20/sih_isl/stargazers" class="pinned-item-meta Link--muted">
+                                <a href="/a-x-r-o-n/sih_isl/stargazers" class="pinned-item-meta Link--muted">
                                   <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
                                     width="16" data-view-component="true" class="octicon octicon-star">
                                     <path
@@ -644,7 +644,7 @@ export default {
                             <div class="pinned-item-list-item-content">
                               <div class="d-flex v-align-middle mr-2">
                                 <span data-view-component="true" class="position-relative"><a id="891553129"
-                                    href="/soniyav20/dlc_lab_exps" data-view-component="true"
+                                    href="/a-x-r-o-n/dlc_lab_exps" data-view-component="true"
                                     class="min-width-0 Link text-bold flex-auto wb-break-all"><span class="repo">
                                       dlc_lab_exps
                                     </span></a> <tool-tip id="tooltip-e21b415f-4bad-4f78-8072-e63c62bac1e9"
@@ -667,7 +667,7 @@ export default {
                                   <span itemprop="programmingLanguage">Jupyter Notebook</span>
                                 </span>
 
-                                <a href="/soniyav20/dlc_lab_exps/stargazers" class="pinned-item-meta Link--muted">
+                                <a href="/a-x-r-o-n/dlc_lab_exps/stargazers" class="pinned-item-meta Link--muted">
                                   <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" version="1.1"
                                     width="16" data-view-component="true" class="octicon octicon-star">
                                     <path

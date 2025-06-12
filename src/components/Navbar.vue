@@ -60,7 +60,7 @@ export default {
         <nav aria-label="User" data-view-component="true" class="js-sidenav-container-pjax js-responsive-underlinenav overflow-hidden UnderlineNav">
             <ul data-view-component="true" class="UnderlineNav-body list-style-none">
                 <li data-view-component="true" class="d-inline-flex">
-                    <a v-if="pageViewing === 0" id="overview-tab" href="/soniyav20" data-tab-item="i0overview-tab" aria-current="page" data-view-component="true" @click.prevent="changePageTrigger(0,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+                    <a v-if="pageViewing === 0" id="overview-tab" href="/a-x-r-o-n" data-tab-item="i0overview-tab" aria-current="page" data-view-component="true" @click.prevent="changePageTrigger(0,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-book UnderlineNav-octicon">
                     <path
                       d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z">
@@ -69,7 +69,7 @@ export default {
                   <span data-view-component="true">Overview</span>
                   <span title="Not available" data-view-component="true" class="Counter"></span>
                     </a>
-                    <a v-else id="overview-tab" href="/soniyav20" data-tab-item="i0overview-tab" data-view-component="true" @click.prevent="changePageTrigger(0,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+                    <a v-else id="overview-tab" href="/a-x-r-o-n" data-tab-item="i0overview-tab" data-view-component="true" @click.prevent="changePageTrigger(0,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-book UnderlineNav-octicon">
                     <path
                       d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z">
@@ -80,7 +80,7 @@ export default {
                     </a>
                 </li>
                 <li data-view-component="true" class="d-inline-flex">
-                    <a v-if="pageViewing === 1" id="repositories-tab" href="/soniyav20?tab=repositories" aria-current="page" @click.prevent="changePageTrigger(1,`search`)" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+                    <a v-if="pageViewing === 1" id="repositories-tab" href="/a-x-r-o-n?tab=repositories" aria-current="page" @click.prevent="changePageTrigger(1,`search`)" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo UnderlineNav-octicon">
                     <path
                       d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z">
@@ -90,7 +90,7 @@ export default {
                   <span v-if="userReposData.length ===0" hidden="hidden" :title="`Bro has ${userReposData?userReposData.length:0} repositories`" data-view-component="true" class="Counter">{{ userReposData?userReposData.length:0 }}</span>
                   <span v-else  :title="`Bro has ${userReposData?userReposData.length:0} repositories`" data-view-component="true" class="Counter">{{ userReposData?userReposData.length:0 }}</span>
                     </a>
-                    <a v-else id="repositories-tab" href="/soniyav20?tab=repositories" @click.prevent="changePageTrigger(1,`search`)" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+                    <a v-else id="repositories-tab" href="/a-x-r-o-n?tab=repositories" @click.prevent="changePageTrigger(1,`search`)" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo UnderlineNav-octicon">
                     <path
                       d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z">
@@ -102,7 +102,7 @@ export default {
                     </a>
                 </li>
                 <li data-view-component="true" class="d-inline-flex">
-                    <a v-if="pageViewing === 2" aria-current="page" id="projects-tab" href="/soniyav20?tab=projects" @click.prevent="changePageTrigger(2,`search`)" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+                    <a v-if="pageViewing === 2" aria-current="page" id="projects-tab" href="/a-x-r-o-n?tab=projects" @click.prevent="changePageTrigger(2,`search`)" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
                     data-view-component="true" class="octicon octicon-table UnderlineNav-octicon">
                     <path
@@ -112,7 +112,7 @@ export default {
                   <span data-view-component="true">Projects</span>
                   <span title="0" hidden="hidden" data-view-component="true" class="Counter">0</span>
                     </a>
-                    <a v-else id="projects-tab" href="/soniyav20?tab=projects" @click.prevent="changePageTrigger(2,`search`)" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+                    <a v-else id="projects-tab" href="/a-x-r-o-n?tab=projects" @click.prevent="changePageTrigger(2,`search`)" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
                     data-view-component="true" class="octicon octicon-table UnderlineNav-octicon">
                     <path
@@ -124,7 +124,7 @@ export default {
                     </a>
                 </li>
                 <li data-view-component="true" class="d-inline-flex">
-                <a v-if="pageViewing === 3" aria-current="page" id="packages-tab" href="/soniyav20?tab=packages" @click.prevent="changePageTrigger(3,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+                <a v-if="pageViewing === 3" aria-current="page" id="packages-tab" href="/a-x-r-o-n?tab=packages" @click.prevent="changePageTrigger(3,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-package UnderlineNav-octicon">
                     <path
                       d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z">
@@ -133,7 +133,7 @@ export default {
                   <span data-view-component="true">Packages</span>
                   <span title="0" hidden="hidden" data-view-component="true" class="Counter">0</span>
                 </a>
-                <a v-else id="packages-tab" href="/soniyav20?tab=packages" @click.prevent="changePageTrigger(3,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+                <a v-else id="packages-tab" href="/a-x-r-o-n?tab=packages" @click.prevent="changePageTrigger(3,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-package UnderlineNav-octicon">
                     <path
                       d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z">
@@ -144,7 +144,7 @@ export default {
                 </a>
               </li>
               <li data-view-component="true" class="d-inline-flex">
-                <a v-if="pageViewing === 4" aria-current="page" id="stars-tab" href="/soniyav20?tab=stars" @click.prevent="changePageTrigger(4,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+                <a v-if="pageViewing === 4" aria-current="page" id="stars-tab" href="/a-x-r-o-n?tab=stars" @click.prevent="changePageTrigger(4,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
                     data-view-component="true" class="octicon octicon-star UnderlineNav-octicon">
                     <path
@@ -155,7 +155,7 @@ export default {
                   <span v-if="userStarredData.length === 0" title="1" hidden="hidden" data-view-component="true" class="Counter">{{ userStarredData?userStarredData.length:0 }}</span>
                   <span v-else title="1" data-view-component="true" class="Counter">{{ userStarredData?userStarredData.length:0 }}</span>
                 </a>
-                <a v-else id="stars-tab" href="/soniyav20?tab=stars" @click.prevent="changePageTrigger(4,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+                <a v-else id="stars-tab" href="/a-x-r-o-n?tab=stars" @click.prevent="changePageTrigger(4,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
                     data-view-component="true" class="octicon octicon-star UnderlineNav-octicon">
                     <path
