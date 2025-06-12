@@ -87,8 +87,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/github-explorer-ui.git
-cd github-explorer-ui
+git clone https://github.com/a-x-r-o-n/gryphon.git
+cd gryphon
 
 # Install dependencies
 npm install
