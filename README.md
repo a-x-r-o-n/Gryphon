@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/your-username/github-explorer-ui?style=flat-square" alt="License">
-  <img src="https://img.shields.io/github/issues/your-username/github-explorer-ui?style=flat-square" alt="Issues">
-  <img src="https://img.shields.io/github/stars/your-username/github-explorer-ui?style=flat-square" alt="Stars">
+  <img src="https://img.shields.io/github/license/a-x-r-o-n/gryphon?style=flat-square" alt="License">
+  <img src="https://img.shields.io/github/issues/a-x-r-o-n/gryphon?style=flat-square" alt="Issues">
+  <img src="https://img.shields.io/github/stars/a-x-r-o-n/gryphon?style=flat-square" alt="Stars">
   <img src="https://img.shields.io/badge/Vue-3.x-brightgreen.svg?style=flat-square" alt="Vue 3">
 </p>
 
