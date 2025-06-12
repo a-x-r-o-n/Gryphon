@@ -110,7 +110,7 @@ VITE_GITHUB_TOKEN=your_personal_token
 
 ## 🌍 Live Demo
 
-> [🔗 View it live](https://your-demo-link.vercel.app/)  
+> [🔗 View it live](https://a-x-r-o-n.github.io/gryphon)  
 > Try searching for: `torvalds`, `gaearon`, or `vuejs` 🚀
 
 ---
@@ -160,8 +160,6 @@ graph TD;
 
 - Inspired by GitHub's elegant design language
     
-- Built with ❤️ by [@your-username](https://github.com/your-username)
-    
 
 ---
 
@@ -179,24 +177,3 @@ Your support helps this grow!
 
 ---
 
-### ✅ Final Touch Tips:
-
-- Use [skillicons.dev](https://skillicons.dev/) or [shields.io](https://shields.io/) for stylish badges and icons.
-    
-- Host screenshots on GitHub issues or an image CDN like Imgur or Cloudinary.
-    
-- Link your live app using [Vercel](https://vercel.com/), [Netlify](https://netlify.com/), or GitHub Pages.
-    
-- Add a `.env.example` to guide others on how to add their GitHub API token.
-    
-
-Let me know if you'd like:
-
-- A custom logo/banner for the top
-    
-- GitHub Actions CI/CD badges
-    
-- Deployment steps for GitHub Pages or Vercel
-    
-
-Would you like me to generate a matching `env.example` or CI config too?
