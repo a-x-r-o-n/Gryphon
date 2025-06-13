@@ -101,7 +101,7 @@ export default {
                   <span v-else  :title="`Bro has ${userReposData?userReposData.length:0} repositories`" data-view-component="true" class="Counter">{{ userReposData?userReposData.length:0 }}</span>
                     </a>
                 </li>
-                <li data-view-component="true" class="d-inline-flex">
+                <!-- <li data-view-component="true" class="d-inline-flex">
                     <a v-if="pageViewing === 2" aria-current="page" id="projects-tab" href="/a-x-r-o-n?tab=projects" @click.prevent="changePageTrigger(2,`search`)" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                         <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
                     data-view-component="true" class="octicon octicon-table UnderlineNav-octicon">
@@ -142,7 +142,7 @@ export default {
                   <span data-view-component="true">Packages</span>
                   <span title="0" hidden="hidden" data-view-component="true" class="Counter">0</span>
                 </a>
-              </li>
+              </li> -->
               <li data-view-component="true" class="d-inline-flex">
                 <a v-if="pageViewing === 4" aria-current="page" id="stars-tab" href="/a-x-r-o-n?tab=stars" @click.prevent="changePageTrigger(4,`search`)" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"

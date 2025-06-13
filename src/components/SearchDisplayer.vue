@@ -708,7 +708,7 @@ export default {
                                 <div v-if="repo[`topics`]" class="topics-row-container d-inline-flex flex-wrap flex-items-center f6 my-1">
                                     <a v-for="topic in repo[`topics`]" data-ga-click="Topic, repository list" data-octo-click="topic_click"
                                     data-octo-dimensions="topic:frontend,repository_id:605965430,repository_nwo:A/client-rest-framework,repository_public:true,repository_is_fork:false"
-                                    href="/topics/frontend" title="Topic: frontend" data-view-component="true"
+                                    :href="`https://github.com/topics/${topic}`" title="Topic: frontend" data-view-component="true"
                                     class="topic-tag topic-tag-link f6 my-1">
                                     {{ topic }}
                                     </a>
@@ -757,7 +757,237 @@ export default {
                     </div>
                 </div>
             </div>
-            <div v-else-if="this.pageViewing === 2"></div>
+            <div v-else-if="this.pageViewing === 2">
+                <!-- <div data-view-component="true" class="Layout-main">
+
+                    <div id="memexes-results" data-hpc="true" data-view-component="true" class="border rounded-2">
+                      <h2 class="sr-only">Search results</h2>
+                      <span hidden="hidden" id="projects-search-results-text" data-view-component="true">
+                        0 open and 0 closed projects found.
+                      </span>
+                      <div data-view-component="true"
+                        class="Box border-top-0 border-left-0 border-right-0 border-bottom-0">
+                        <div id="header-8bbfeb98-3e8a-4baa-a01a-77f8a90160f3" data-view-component="true"
+                          class="Box-header border-bottom-0">
+
+                          <div data-view-component="true" class="d-flex flex-auto flex-items-center">
+                            <div data-view-component="true" class="d-flex flex-auto flex-shrink-0">
+                              <a href="/users/A/projects?is_search=true&amp;query=is%3Aopen" data-view-component="true"
+                                class="Link--primary Link text-bold p-0"><svg aria-hidden="true" height="16"
+                                  viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                                  class="octicon octicon-table">
+                                  <path
+                                    d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z">
+                                  </path>
+                                </svg>
+                                0 Open</a> <a href="/users/A/projects?is_search=true&amp;query=is%3Aclosed"
+                                data-view-component="true"
+                                class="Link--primary Link Link--muted text-normal p-0 ml-3"><svg aria-hidden="true"
+                                  height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+                                  class="octicon octicon-archive">
+                                  <path
+                                    d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v1.5A1.75 1.75 0 0 1 14.25 6H1.75A1.75 1.75 0 0 1 0 4.25ZM1.75 7a.75.75 0 0 1 .75.75v5.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-5.5a.75.75 0 0 1 1.5 0v5.5A1.75 1.75 0 0 1 13.25 15H2.75A1.75 1.75 0 0 1 1 13.25v-5.5A.75.75 0 0 1 1.75 7Zm0-4.5a.25.25 0 0 0-.25.25v1.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-1.5a.25.25 0 0 0-.25-.25ZM6.25 8h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1 0-1.5Z">
+                                  </path>
+                                </svg>
+                                0 Closed</a>
+                            </div>
+                            <action-menu data-select-variant="single" data-view-component="true">
+                              <focus-group direction="vertical" mnemonics retain>
+                                <button id="action-menu-707ad61c-e198-4e32-9f7d-7a62ea768ff9-button"
+                                  popovertarget="action-menu-707ad61c-e198-4e32-9f7d-7a62ea768ff9-overlay"
+                                  aria-controls="action-menu-707ad61c-e198-4e32-9f7d-7a62ea768ff9-list"
+                                  aria-haspopup="true" type="button" data-view-component="true"
+                                  class="Button--invisible Button--medium Button p-0"> <span class="Button-content">
+                                    <span class="Button-label">Sort</span>
+                                  </span>
+                                  <span class="Button-visual Button-trailingAction">
+                                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                                      data-view-component="true" class="octicon octicon-triangle-down">
+                                      <path
+                                        d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z">
+                                      </path>
+                                    </svg>
+                                  </span>
+                                </button>
+
+
+                                <anchored-position data-target="action-menu.overlay"
+                                  id="action-menu-707ad61c-e198-4e32-9f7d-7a62ea768ff9-overlay"
+                                  anchor="action-menu-707ad61c-e198-4e32-9f7d-7a62ea768ff9-button" align="end"
+                                  side="outside-bottom" anchor-offset="normal" popover="auto"
+                                  data-view-component="true">
+                                  <div data-view-component="true" class="Overlay Overlay--size-auto">
+
+                                    <div data-view-component="true" class="Overlay-body Overlay-body--paddingNone">
+                                      <action-list>
+                                        <div data-view-component="true">
+                                          <ul aria-labelledby="action-menu-707ad61c-e198-4e32-9f7d-7a62ea768ff9-button"
+                                            id="action-menu-707ad61c-e198-4e32-9f7d-7a62ea768ff9-list" role="menu"
+                                            data-view-component="true" class="ActionListWrap--inset ActionListWrap">
+                                            <li data-targets="action-list.items" role="none" data-view-component="true"
+                                              class="ActionListItem">
+
+
+                                              <a href="/users/A/projects?is_search=true&amp;query=is%3Aopen?type=new&amp;query=is:open sort:updated-desc"
+                                                tabindex="-1" id="item-e1735d61-5cef-49f2-b196-eb491f4bd7bf"
+                                                role="menuitemradio" aria-checked="true" data-view-component="true"
+                                                class="ActionListContent">
+                                                <span class="ActionListItem-visual ActionListItem-action--leading">
+                                                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
+                                                    width="16" data-view-component="true"
+                                                    class="octicon octicon-check ActionListItem-singleSelectCheckmark">
+                                                    <path
+                                                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                                    </path>
+                                                  </svg>
+                                                </span>
+
+                                                <span data-view-component="true" class="ActionListItem-label">
+                                                  <div class="select-menu-item-text">Recently updated</div>
+
+                                                </span>
+                                              </a>
+
+                                            </li>
+                                            <li data-targets="action-list.items" role="none" data-view-component="true"
+                                              class="ActionListItem">
+
+
+                                              <a href="/users/A/projects?is_search=true&amp;query=is%3Aopen?type=new&amp;query=is:open sort:created-desc"
+                                                tabindex="-1" id="item-2cbee5eb-2cef-4477-b7db-f64b6fb1ab3c"
+                                                role="menuitemradio" aria-checked="false" data-view-component="true"
+                                                class="ActionListContent">
+                                                <span class="ActionListItem-visual ActionListItem-action--leading">
+                                                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
+                                                    width="16" data-view-component="true"
+                                                    class="octicon octicon-check ActionListItem-singleSelectCheckmark">
+                                                    <path
+                                                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                                    </path>
+                                                  </svg>
+                                                </span>
+
+                                                <span data-view-component="true" class="ActionListItem-label">
+                                                  <div class="select-menu-item-text">Newest</div>
+
+                                                </span>
+                                              </a>
+
+                                            </li>
+                                            <li data-targets="action-list.items" role="none" data-view-component="true"
+                                              class="ActionListItem">
+
+
+                                              <a href="/users/A/projects?is_search=true&amp;query=is%3Aopen?type=new&amp;query=is:open sort:created-asc"
+                                                tabindex="-1" id="item-f16ef7de-5b1f-478e-a2b8-f213dcbe3867"
+                                                role="menuitemradio" aria-checked="false" data-view-component="true"
+                                                class="ActionListContent">
+                                                <span class="ActionListItem-visual ActionListItem-action--leading">
+                                                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
+                                                    width="16" data-view-component="true"
+                                                    class="octicon octicon-check ActionListItem-singleSelectCheckmark">
+                                                    <path
+                                                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                                    </path>
+                                                  </svg>
+                                                </span>
+
+                                                <span data-view-component="true" class="ActionListItem-label">
+                                                  <div class="select-menu-item-text">Oldest</div>
+
+                                                </span>
+                                              </a>
+
+                                            </li>
+                                            <li data-targets="action-list.items" role="none" data-view-component="true"
+                                              class="ActionListItem">
+
+
+                                              <a href="/users/A/projects?is_search=true&amp;query=is%3Aopen?type=new&amp;query=is:open sort:updated-asc"
+                                                tabindex="-1" id="item-05f85e31-e36c-4bb7-852c-56f581958ab5"
+                                                role="menuitemradio" aria-checked="false" data-view-component="true"
+                                                class="ActionListContent">
+                                                <span class="ActionListItem-visual ActionListItem-action--leading">
+                                                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
+                                                    width="16" data-view-component="true"
+                                                    class="octicon octicon-check ActionListItem-singleSelectCheckmark">
+                                                    <path
+                                                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                                    </path>
+                                                  </svg>
+                                                </span>
+
+                                                <span data-view-component="true" class="ActionListItem-label">
+                                                  <div class="select-menu-item-text">Least recently updated</div>
+
+                                                </span>
+                                              </a>
+
+                                            </li>
+                                            <li data-targets="action-list.items" role="none" data-view-component="true"
+                                              class="ActionListItem">
+
+
+                                              <a href="/users/A/projects?is_search=true&amp;query=is%3Aopen?type=new&amp;query=is:open sort:title-asc"
+                                                tabindex="-1" id="item-8ff3315f-190c-43ae-aca8-51a48e86948a"
+                                                role="menuitemradio" aria-checked="false" data-view-component="true"
+                                                class="ActionListContent">
+                                                <span class="ActionListItem-visual ActionListItem-action--leading">
+                                                  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1"
+                                                    width="16" data-view-component="true"
+                                                    class="octicon octicon-check ActionListItem-singleSelectCheckmark">
+                                                    <path
+                                                      d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                                                    </path>
+                                                  </svg>
+                                                </span>
+
+                                                <span data-view-component="true" class="ActionListItem-label">
+                                                  <div class="select-menu-item-text">Name</div>
+
+                                                </span>
+                                              </a>
+
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </action-list>
+
+
+                                    </div>
+
+                                  </div>
+                                </anchored-position> </focus-group>
+                            </action-menu>
+                          </div>
+
+                        </div>
+
+                        <ul aria-labelledby="header-8bbfeb98-3e8a-4baa-a01a-77f8a90160f3" data-view-component="true">
+                          <li data-view-component="true" class="Box-row border-top">
+                            <div class="blankslate-container">
+                              <div data-view-component="true" class="blankslate">
+                                <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24"
+                                  data-view-component="true" class="octicon octicon-table blankslate-icon">
+                                  <path
+                                    d="M2 3.75C2 2.784 2.784 2 3.75 2h16.5c.966 0 1.75.784 1.75 1.75v16.5A1.75 1.75 0 0 1 20.25 22H3.75A1.75 1.75 0 0 1 2 20.25ZM9 9v11.5h11.25a.25.25 0 0 0 .25-.25V9Zm11.5-1.5V3.75a.25.25 0 0 0-.25-.25H9v4ZM3.5 9v11.25c0 .138.112.25.25.25H7.5V9Zm4-1.5v-4H3.75a.25.25 0 0 0-.25.25V7.5Z">
+                                  </path>
+                                </svg>
+
+                                <h2 data-view-component="true" class="blankslate-heading"> No open projects
+                                </h2>
+                                <p data-view-component="true"></p>
+
+                              </div>
+                            </div>
+
+
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div> -->
+            </div>
             <div v-else-if="this.pageViewing === 3"></div>
             <div v-else-if="this.pageViewing === 4"></div>
 
@@ -862,7 +1092,7 @@ export default {
 .paginate-container {
     display: flex;
     margin-top: var(--base-size-24);
-    margin-bottom: var(--base-size-24);
+    margin-bottom: var(--base-size-12);
     justify-content: center;
 }
 
